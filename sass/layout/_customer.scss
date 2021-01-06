@@ -6,9 +6,11 @@
   .customer-list {
     display: flex;
   }
-  .customer-list-item:not(:last-child) {
+  .customer-list-item {
+  &:not(:last-child) {
     margin-right: 30px;
   }
+}
   .our-customer-title {
   font-family: var(--main-font);
   font-weight: 700;
@@ -29,21 +31,22 @@
     box-sizing: border-box;
     border-radius: 4px;
     background-color:var(--second-color);
+
+   &:hover,
+   &:focus {
+  border-color: var(--accent-color);
+  }
   
     transition: border-color 250ms var(--time-function);
   }
   
-  .customer-list-link:hover .customer-list-icon,
-  .customer-list-link:focus .customer-list-icon {
-    fill: var(--accent-color);
-  }
-  .customer-list-link:hover,
-  .customer-list-link:focus {
-  border-color: var(--accent-color);
-  }
   .customer-list-icon {
     fill: #AFB1B8;
-  
+
+  .customer-list-link:hover &,
+  .customer-list-link:focus & {
+    fill: var(--accent-color);
+  }
     transition: fill 250ms var(--time-function);
   }
   

@@ -63,13 +63,15 @@
     border-radius: 50%;
     background-color:rgba(255, 255, 255, 0.1);
     margin-right: 10px;
+
+   &:focus,
+   &:hover{
+    background-color:var(--accent-color);
+  }
   
     transition: background-color 250ms var(--time-function);
   }
-  .social-list__link:focus,
-  .social-list__link:hover{
-    background-color:var(--accent-color);
-  }
+  
   
   .social-links-title {
   font-family: var(--main-font);

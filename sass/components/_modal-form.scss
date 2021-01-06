@@ -10,14 +10,13 @@
   border-radius: 4px;
   
   transition: border-color 250ms var(--time-function);
-  }
-  .form-input-field:focus {
-    outline: none;
-    border-color: var(--accent-color);
-  }
-  .form-input-field:focus + .form-icon {
-    fill: var(--accent-color);
-  }
+  &:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+ }
+  /*.form-input-field*/
+  
   .form-title {
   font-family: var(--main-font);
   font-weight: 700;
@@ -59,6 +58,9 @@
     
   transform: translateY(-50%);
   transition: fill 250ms var(--time-function);
+
+  .form-input-field:focus + & {
+  fill: var(--accent-color);}
   }
   .form-wrapper {
   position: relative;
@@ -79,6 +81,17 @@
   letter-spacing: 0.01em;
   margin-top: 4px;
   margin-bottom: 20px;
+
+  &:focus {
+  outline: none;
+  border-color: var(--accent-color);
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    }
+    
+  transition: border-color 250ms var(--time-function);
+}
   }
   .text-label {
   font-family: var(--main-font);
@@ -88,30 +101,7 @@
   letter-spacing: 0.01em;
   color: #757575;
   }
-  .modal-form-message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  }
-  .modal-form-message:focus {
-  outline: none;
-  border-color: var(--accent-color);
-  
-  transition: border-color 250ms var(--time-function);
-  }
-  .policy-form-text::before {
-    content: '';
-    display:inline-block;
-    width: 16px;
-    height: 15px;
-    border: 2px solid #000;
-    border-radius: 2px;
-    margin-right: 8px;
-  
-  }
-  .policy-form-inp:checked + .policy-form-text::before {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    background-image:url("../sprite/check.svg");
-  }
+
   .policy-link {
     color: #2196F3;
     text-decoration: underline;
@@ -129,6 +119,23 @@
     letter-spacing: 0.03em;
     margin-bottom: 30px;
     color: #757575;
+
+   &::before {
+      content: '';
+      display:inline-block;
+      width: 16px;
+      height: 15px;
+      border: 2px solid #000;
+      border-radius: 2px;
+      margin-right: 8px;
+
+     .policy-form-inp:checked + & {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      background-image:url("../sprite/check.svg");
+      }
+    
+    }
     }
     .form-input {
     width: 358px;
@@ -176,3 +183,4 @@
     height: 18px;
     margin-left: 10px;
     }
+    

@@ -129,10 +129,7 @@ img {
   border-color: var(--accent-color);
 }
 
-.form-input-field:focus + .form-icon {
-  fill: var(--accent-color);
-}
-
+/*.form-input-field*/
 .form-title {
   font-family: var(--main-font);
   font-weight: 700;
@@ -175,6 +172,10 @@ img {
   left: 12px;
   transform: translateY(-50%);
   transition: fill 250ms var(--time-function);
+}
+
+.form-input-field:focus + .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-wrapper {

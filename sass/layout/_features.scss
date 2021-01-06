@@ -8,10 +8,11 @@
   .features-item {
     margin-right: 30px;
   }
-  .features-list-item:not(:last-child) {
-    margin-right: 30px;
-  }
-  
+  .features-list-item {
+  &:not(:last-child) {
+  margin-right: 30px;
+}
+ }
   .features-title {
   font-weight: 700;
   font-size: 14px;

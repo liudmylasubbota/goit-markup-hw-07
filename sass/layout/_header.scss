@@ -23,19 +23,16 @@
     
       transition: color 250ms var(--time-function);
     }
-    .link:hover,
-    .link:focus {
-      color: var(--accent-color)
-    }
-    
-    .navigation-list .link.is-current {
-      color: var(--accent-color);
-    }
     
     .link {
       position: relative;
+      &:hover,
+      &:focus {
+      color: var(--accent-color)
     }
-    .is-current::after {
+    }
+    .is-current {
+    &::after {
     content: '';
     width: 100%;
     height: 4px;
@@ -43,14 +40,34 @@
     border-radius: 2px;
     position: absolute;
     bottom: -31px;
-    left: 0;
-    }
+    left: 0;}
+
+    .navigation-list .link & {
+      color: var(--accent-color);
+     }
+  }
+
     
-    .contact-header-tel,
+    .contact-header-tel {
+      color: #757575;
+      display: flex;
+      align-items: center;
+
+     &:hover,
+     &:focus {
+      color: var(--accent-color);
+    }
+    }
+
     .contact-header-mail {
       color: #757575;
       display: flex;
       align-items: center;
+
+     &:hover,
+     &:focus {
+      color: var(--accent-color);
+    }
     }
     .navigation {
       display: flex;
@@ -67,25 +84,13 @@
       align-items: center;
       justify-content: center;
     }
-    .contact-header-tel:hover,
-    .contact-header-tel:focus,
-    .contact-header-mail:hover,
-    .contact-header-mail:focus {
-      color: var(--accent-color);
-    }
-    .contact-header-mail:focus .icon-contacts,
-    .contact-header-mail:hover .icon-contacts,
-    .contact-header-tel:hover .icon-contacts,
-    .contact-header-tel:focus .icon-contacts {
-    fill: var(--accent-color);
-    }
+    
+    
     .header .logo {
       margin-right: 93px;
     }
-    .navigation-list-item:not(:last-child),
-    .contact-list-item:not(:last-child) {
-      margin-right: 50px;
-    }
+    
+    
     .header .contact-list {
       margin-left: auto;
     }
@@ -101,6 +106,13 @@
     .icon-contacts {
       margin-right: 10px;
       fill: #757575;
+
+    .contact-header-mail:focus &,
+    .contact-header-mail:hover &,
+    .contact-header-tel:hover  &,
+    .contact-header-tel:focus  & {
+    fill: var(--accent-color);
+    }
     
       transition: fill 250ms var(--time-function);
     }

@@ -7,11 +7,6 @@
   .task-item {
     display: flex;
   }
-  
-  .task-item-list:not(:last-child) {
-  margin-right: 30px;
-  }
-  
   .task-title {
   font-weight: 700;
   font-size: 36px;
@@ -24,6 +19,10 @@
   
   .task-item-list {
     position: relative;
+
+  &:not(:last-child) {
+      margin-right: 30px;
+      }
   }
   .undertitle {
     font-family: var(--main-font);
