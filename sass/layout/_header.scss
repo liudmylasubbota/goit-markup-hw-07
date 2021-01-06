@@ -1,0 +1,106 @@
+.logo {
+    font-family:'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    }
+    .logo-web {
+    color: var(--accent-color)
+    }
+    .logo-studio{
+    color: #000000;
+    }
+    .link,
+    .contact-header-tel,
+    .contact-header-mail {
+      font-family: var(--main-font);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.142;
+      letter-spacing: 0.02em;
+      color: #212121;
+    
+      transition: color 250ms var(--time-function);
+    }
+    .link:hover,
+    .link:focus {
+      color: var(--accent-color)
+    }
+    
+    .navigation-list .link.is-current {
+      color: var(--accent-color);
+    }
+    
+    .link {
+      position: relative;
+    }
+    .is-current::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    }
+    
+    .contact-header-tel,
+    .contact-header-mail {
+      color: #757575;
+      display: flex;
+      align-items: center;
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+    }
+    .navigation-list {
+      display: flex;
+    }
+    .contact-list {
+      display: flex;
+    }
+    .contact-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-header-tel:hover,
+    .contact-header-tel:focus,
+    .contact-header-mail:hover,
+    .contact-header-mail:focus {
+      color: var(--accent-color);
+    }
+    .contact-header-mail:focus .icon-contacts,
+    .contact-header-mail:hover .icon-contacts,
+    .contact-header-tel:hover .icon-contacts,
+    .contact-header-tel:focus .icon-contacts {
+    fill: var(--accent-color);
+    }
+    .header .logo {
+      margin-right: 93px;
+    }
+    .navigation-list-item:not(:last-child),
+    .contact-list-item:not(:last-child) {
+      margin-right: 50px;
+    }
+    .header .contact-list {
+      margin-left: auto;
+    }
+    
+    .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
+    }
+    .icon-contacts {
+      margin-right: 10px;
+      fill: #757575;
+    
+      transition: fill 250ms var(--time-function);
+    }
