@@ -131,9 +131,9 @@
     margin-right: 8px;
 
     .policy-form-inp:checked + & {
-      background-color: var(--accent-color);
-      border-color: var(--accent-color);
-      background-image: url("../sprite/check.svg");
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url("../sprite/check.svg");
     }
   }
 }
